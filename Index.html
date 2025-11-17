@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Bestie 🎉</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding-top: 120px;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Floating hearts cursor */
+    body::after {
+      content: '';
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/cover;
+      pointer-events: none;
+      animation: followCursor .1s infinite;
+    }
+
+    @keyframes followCursor {
+      from { transform: translate(var(--x), var(--y)); }
+      to { transform: translate(var(--x), var(--y)); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: fadeInDown 2s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background: white;
+      color: #ff6f91;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover { transform: scale(1.1); background: #ffe6ef; }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/8cq3a6.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>🎉 Happy Birthday My Cutie Bestie! 🎉</h1>
+  <p>You deserve the happiest day ever 💖</p>
+  <button class="btn" onclick="location.href='messages.html'">Click For Next Surprise 🎁</button>
+
+  <script>
+    document.addEventListener('mousemove', e => {
+      document.body.style.setProperty('--x', e.clientX + 'px');
+      document.body.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+</body>
+</html>
