@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Photos 📸</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #c3cfe2, #e2ebf0);
+      font-family: 'Poppins', sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 { color: #37474f; font-size: 2.5rem; animation: fadeIn 2s; }
+
+    .gallery {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      animation: slideUp 2s;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    img:hover { transform: scale(1.05); }
+
+    .btn {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background: #37474f;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .btn:hover { background: #263238; }
+  </style>
+</head>
+<body>
+  <h2>📸 Our Cutest Memories 📸</h2>
+  <p>Add your photos in place of the placeholders</p>
+
+  <div class="gallery">
+    <img src="your-photo1.jpg" />
+    <img src="your-photo2.jpg" />
+    <img src="your-photo3.jpg" />
+  </div>
+
+  <button class="btn" onclick="location.href='final.html'">Final Surprise 🎉</button>
+</body>
+</html>
